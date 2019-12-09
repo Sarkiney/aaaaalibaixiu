@@ -1,14 +1,14 @@
 $('#logout').on('click', function () {
-    var isConfirm = confirm('真的要退出啊？')
+    var isConfirm = confirm('真的要退出吗');
     if (isConfirm) {
         $.ajax({
             type: 'post',
             url: '/logout',
-            success: function (res) {
-                location.href = 'login.html'
+            success: function () {
+                location.href = 'login.html';
             },
-            error: function (res) {
-                alert('哈哈哈，退出失败了')
+            error: function () {
+                alert('哈哈哈，退出失败了');
             }
         })
     }
